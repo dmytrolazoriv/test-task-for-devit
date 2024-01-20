@@ -5,6 +5,7 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Browse our latest products",
             "heading_size": "h0"
@@ -26,6 +27,7 @@
         "heading",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -41,6 +43,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -66,10 +69,71 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "lookbook_RPtrd8": {
+      "type": "lookbook",
+      "blocks": {
+        "image_qxTG8r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lookbook_img_1.webp"
+          }
+        },
+        "text_najCiH": {
+          "type": "text",
+          "settings": {
+            "text": "Our latest collection demonstrates an elegant eccentricity – bold patterns inspired by traditional nomadic dressing, embroidered buttons, ceramic detailing and artisanal stitching contrast with stark, clean-lined silhouettes that showcase refined modernity."
+          }
+        },
+        "button_TFaAcd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Add to bag"
+          }
+        },
+        "product_hMf7n3": {
+          "type": "product",
+          "settings": {
+            "product": "cloud-nine"
+          }
+        },
+        "product_CtWJUy": {
+          "type": "product",
+          "settings": {
+            "product": "essential-oils"
+          }
+        },
+        "product_B9QaCg": {
+          "type": "product",
+          "settings": {
+            "product": "r0-dining-chair"
+          }
+        },
+        "product_rH6rzK": {
+          "type": "product",
+          "settings": {
+            "product": "handmade-ceramics"
+          }
+        }
+      },
+      "block_order": [
+        "image_qxTG8r",
+        "text_najCiH",
+        "button_TFaAcd",
+        "product_hMf7n3",
+        "product_CtWJUy",
+        "product_B9QaCg",
+        "product_rH6rzK"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "lookbook_RPtrd8"
   ]
 }
