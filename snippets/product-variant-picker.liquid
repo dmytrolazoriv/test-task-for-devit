@@ -24,6 +24,7 @@
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
           <legend class="form__label">{{ option.name }}</legend>
+          {%- assign product = block.settings.product -%}
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
@@ -54,7 +55,12 @@
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
-              {% render 'product-variant-options', product: product, option: option, block: block %}
+            {%- for value in option.values -%}
+              <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>
+                {{ value | escape }}
+              </option>
+            {%- endfor -%}
+              {% comment %} {% render 'product-variant-options', product: product, option: option, block: block %} {% endcomment %}
             </select>
             {% render 'icon-caret' %}
           </div>

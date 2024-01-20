@@ -1,0 +1,332 @@
+/* Lookbook section start */
+.lookbook {
+}
+
+.lookbook__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.lookbook__text:not(:last-child) {
+    margin: 0 0 30px 0;
+}
+
+.lookbook__info {
+    text-align: center;
+}
+
+.lookbook__image {
+}
+
+.lookbook__image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.page-width {
+}
+/* Lookbook section end */
+
+/* Modal snippet start */
+.modal__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*height: 100vh;*/
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    /*Hiding background and popup */
+    opacity: 0;
+    /*Forbid him to be the target of events*/
+    pointer-events: none;
+    transition: all 0.2s ease 0s;
+}
+
+/* When adding a class 'active'*/
+.modal__bg.active {
+    /*Showing background and popup*/
+    opacity: 1;
+    /*Returning events*/
+    pointer-events: all;
+    transition: all 0.2s ease 0s;
+    z-index: 3;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 90vw;
+    height: 90vh;
+    padding: 20px;
+    transition: all 0.2s ease 0s;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* When adding a class 'active' */
+.modal.active {
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease 0s;
+}
+
+.modal label {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.modal input {
+    height: 45px;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modal__bg {
+}
+
+.modal {
+}
+
+.modal__container {
+}
+
+.modal__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.modal__column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.modal__column:first-child img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.modal__submit-button {
+    min-width: 140px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.modal__submit-button .loading-overlay__spinner {
+    width: 1.5rem;
+}
+
+.modal__submit-button .loading-overlay__spinner .path {
+    stroke: rgb(var(--color-background));
+}
+
+.product-card__image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+}
+
+.product-card:not(:last-child) {
+    border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+}
+
+.product-card:last-child {
+    padding-bottom: 0;
+}
+
+.product-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 20px;
+    width: 100%;
+}
+
+.product-card__wrapper:hover .product-card__image img {
+	transform: scale(1.03);
+}
+
+.product-card__wrapper:hover .product-card__title {
+    text-decoration: underline;
+}
+
+.product-card__image {
+    overflow: hidden;
+}
+
+.product-card__sku {
+    color: rgb(var(--color-foreground));
+}
+
+.product-card__header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-card__link {
+    color: rgb(var(--color-foreground));
+    text-decoration: none;
+}
+
+.product-card__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.product-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card__form {
+    width: 100%;
+}
+
+.product-add-to-cart-form {
+    display: block;
+}
+
+.product-add-to-cart-form .select__select {
+    min-width: 140px;
+}
+
+.product-card__form.end .product-add-to-cart-form {
+    justify-content: flex-end;
+}
+
+.product-card__title,
+.product-card__variant-title {
+    color: black;
+}
+
+.card-header__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header__bottom {
+}
+
+.product-card__price {
+    color: rgb(var(--color-foreground));
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    line-height: calc(1 + .5 / var(--font-body-scale));
+}
+
+.product-card__price .money {
+    display: block;
+}
+
+.product-card__compare-price {
+    text-decoration: line-through;
+    color: rgba(var(--color-foreground),.75);
+    font-size: 1.3rem;
+}
+
+.product-card__desc {
+    color: rgba(var(--color-foreground), 0.75);
+}
+/* Modal snippet end */
+
+/* Media queries start */
+@media (min-width: 576px) {
+    .lookbook__wrapper {
+        gap: 40px;
+    }
+
+    .product-add-to-cart-form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .modal__submit-button {
+        min-width: 140px;
+        margin-top: 0;
+        width: unset;
+    }
+}
+
+@media (min-width: 768px) {
+    .lookbook__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .product-card__wrapper {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        gap: 40px;
+    }
+
+    .product-add-to-cart-form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1099px) {
+    .product-add-to-cart-form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-add-to-cart-form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
+/* Media queries end */
